@@ -13,6 +13,7 @@ ENV CPC_BG_DB_PATH=/app/data/cpc-bg.db
 COPY package.json package-lock.json* ./
 RUN npm ci --omit=dev --ignore-scripts && npm cache clean --force
 COPY --from=builder /app/dist/ dist/
+COPY data/ data/
 RUN addgroup --system --gid 1001 mcp && adduser --system --uid 1001 --ingroup mcp mcp && chown -R mcp:mcp /app
 USER mcp
 HEALTHCHECK --interval=10s --timeout=5s --start-period=30s --retries=3   CMD node -e "require('http').get('http://localhost:3000/health',r=>{process.exit(r.statusCode===200?0:1)}).on('error',()=>process.exit(1))"
