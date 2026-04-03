@@ -1,11 +1,38 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "eu.ansvar/bulgarian-competition-mcp",
-  "description": "Query CPC (Bulgarian Commission for Protection of Competition) decisions, merger control cases, and sector enforcement activity",
-  "repository": { "url": "https://github.com/Ansvar-Systems/bulgarian-competition-mcp", "source": "github" },
+  "description": "CPC (Bulgarian Commission for Protection of Competition) MCP server — competition law decisions, merger control, and sector enforcement",
+  "repository": {
+    "url": "https://github.com/Ansvar-Systems/bulgarian-competition-mcp",
+    "source": "github"
+  },
   "homepage": "https://ansvar.eu",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "Apache-2.0",
-  "keywords": ["cpc-bg", "bulgarian-competition", "cartel", "merger-control", "antitrust", "bulgaria", "competition-law", "compliance", "mcp", "ansvar"],
-  "packages": [{ "registryType": "npm", "identifier": "@ansvar/bulgarian-competition-mcp", "version": "0.1.0", "transport": { "type": "stdio" } }]
+  "keywords": [
+    "competition",
+    "bulgaria",
+    "regulation",
+    "compliance",
+    "mcp"
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@ansvar/bulgarian-competition-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    },
+    {
+      "registryType": "npm",
+      "identifier": "@ansvar/bulgarian-competition-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "streamable-http",
+        "url": "https://mcp.ansvar.eu/bulgarian-competition/mcp"
+      }
+    }
+  ]
 }
