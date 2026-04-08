@@ -5,6 +5,7 @@
 [![npm version](https://badge.fury.io/js/%40ansvar%2Fbulgarian-competition-mcp.svg)](https://www.npmjs.com/package/@ansvar/bulgarian-competition-mcp)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CI](https://github.com/Ansvar-Systems/bulgarian-competition-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Ansvar-Systems/bulgarian-competition-mcp/actions/workflows/ci.yml)
+[![Build](https://github.com/Ansvar-Systems/bulgarian-competition-mcp/actions/workflows/ghcr-build.yml/badge.svg)](https://github.com/Ansvar-Systems/bulgarian-competition-mcp/actions/workflows/ghcr-build.yml)
 
 Query Bulgarian competition data -- regulations, decisions, and requirements from CPC (Commission on Protection of Competition) -- directly from Claude, Cursor, or any MCP-compatible client.
 
@@ -117,7 +118,7 @@ All content is sourced from official Bulgarian regulatory publications:
 - Freshness checks run via GitHub Actions workflows
 - Last-updated timestamps in tool responses indicate data age
 
-See `sources.yml` for full provenance metadata.
+See `bg_comp_list_sources` tool for full provenance metadata.
 
 ---
 
@@ -180,8 +181,8 @@ npx @anthropic/mcp-inspector node dist/index.js   # Test with MCP Inspector
 ### Data Management
 
 ```bash
-npm run build:db       # Rebuild SQLite database from seed data
-npm run check-updates  # Check for new regulatory data
+npm run seed    # Seed sample data into SQLite database
+npm run ingest  # Ingest CPC decisions from official source
 ```
 
 ---
@@ -218,7 +219,7 @@ Apache License 2.0. See [LICENSE](./LICENSE) for details.
 
 ### Data Licenses
 
-Regulatory data sourced from official government publications. See `sources.yml` for per-source licensing details.
+Regulatory data sourced from official government publications. See `bg_comp_list_sources` tool for per-source licensing details.
 
 ---
 

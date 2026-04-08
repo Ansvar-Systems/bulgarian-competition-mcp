@@ -2,8 +2,8 @@
  * SQLite database access layer for the CPC (Bulgarian Commission for Protection of Competition) MCP server.
  *
  * Schema:
- *   - decisions    — Bundeskartellamt enforcement decisions (abuse of dominance, cartels, sector inquiries)
- *   - mergers      — Merger control decisions (Fusionskontrolle)
+ *   - decisions    — CPC Bulgaria enforcement decisions (abuse of dominance, cartels, sector inquiries)
+ *   - mergers      — Merger control decisions (concentrations)
  *   - sectors      — Sectors with enforcement activity
  *
  * FTS5 virtual tables back full-text search on decisions and mergers.
