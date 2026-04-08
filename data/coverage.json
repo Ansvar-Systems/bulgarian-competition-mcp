@@ -1,0 +1,35 @@
+{
+  "jurisdiction": "BG",
+  "authority": "CPC Bulgaria — Commission for Protection of Competition (Комисия за защита на конкуренцията)",
+  "authority_url": "https://www.cpc.bg/",
+  "legal_basis": "ZZK — Zakon za Zashtita na Konkurentsiyata",
+  "data_types": [
+    {
+      "id": "enforcement_decisions",
+      "label": "Enforcement Decisions",
+      "description": "Abuse of dominance, cartel, and sector inquiry decisions",
+      "case_format": "КЗК-NNNN/YYYY"
+    },
+    {
+      "id": "merger_control",
+      "label": "Merger Control Decisions",
+      "description": "Concentration notifications and clearance decisions (Phase I and Phase II)",
+      "case_format": "КЗК-К-NNN/YYYY"
+    }
+  ],
+  "sectors": [
+    "telecommunications",
+    "energy",
+    "retail",
+    "financial_services",
+    "healthcare",
+    "media",
+    "digital_economy",
+    "transport",
+    "construction"
+  ],
+  "languages": ["bg", "en"],
+  "license": "Public domain — official government publications",
+  "update_frequency": "periodic",
+  "coverage_note": "Coverage may lag official CPC publications. Historical decisions prior to digitization may be incomplete."
+}
